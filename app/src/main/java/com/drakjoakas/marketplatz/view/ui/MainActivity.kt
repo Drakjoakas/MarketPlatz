@@ -68,6 +68,9 @@ class MainActivity : AppCompatActivity(), Adaptador.OnItemListener {
         val parametros = Bundle()
 
         parametros.putString("id",producto.id)
+        parametros.putString("precio",producto.price)
+        parametros.putString("envio",producto.delivery)
+        parametros.putString("proveedor",producto.provider)
 
         val intent = Intent(this, Detalles::class.java)
         intent.putExtras(parametros)

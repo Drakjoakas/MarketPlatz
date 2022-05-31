@@ -37,19 +37,50 @@
                     android:textStyle="bold"
                     tools:text="@string/titulo_placeholder" />
 
+                <TextView
+                    android:id="@+id/tvProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    tools:text="@string/proveedor_placeholder" />
+
                 <ImageView
                     android:id="@+id/ivDetalle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="28dp"
+                    android:contentDescription="@string/content_descripction_producto"
+                    tools:ignore="ImageContrastCheck"
                     tools:srcCompat="@tools:sample/avatars" />
+
+                <TextView
+                    android:id="@+id/tvPrecio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    tools:text="@string/precio_placeholder" />
+
+                <TextView
+                    android:id="@+id/tvEnvio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/green"
+                    tools:ignore="TextContrastCheck"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    tools:text="@string/envio_placeholder" />
 
                 <Button
                     android:id="@+id/btnComprar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="@string/boton_comprar" />
+                    android:onClick="onClik"
+                    android:text="@string/boton_comprar"
+                    tools:ignore="TextContrastCheck" />
 
                 <TextView
                     android:id="@+id/tvDescripcion"
@@ -63,13 +94,13 @@
                     tools:text="@string/lorem_ipsum_3" />
             </LinearLayout>
         </ScrollView>
+
         <ProgressBar
             android:id="@+id/pbConexion"
             style="?android:attr/progressBarStyle"
             android:layout_width="97dp"
             android:layout_height="89dp"
-            android:layout_centerInParent="true"
-            />
+            android:layout_centerInParent="true" />
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

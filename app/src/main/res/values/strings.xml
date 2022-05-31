@@ -10,9 +10,13 @@ Morbi a urna luctus, congue ligula non, accumsan lectus. Quisque a pharetra null
     <string name="proveedor_placeholder">Bodega Aurrera</string>
     <string name="precio_placeholder">599.99</string>
     <string name="envio_placeholder">60.00</string>
+    <string name="content_descripction_producto">Imagen del producto descrito</string>
 
     <string name="envio">Envio: +$ %1$s</string>
-    <string name="precio">$%1$s</string>
+    <string name="precio">Precio: $%1$s</string>
 
     <string name="boton_comprar">Agregar al Carrito</string>
+    <string name="mensaje_dialog_carrito">Función no implementada.</string>
+    <string name="titulo_dialog_carrito">Error</string>
+    <string name="cerrar_dialog">Cerrar</string>
 </resources>

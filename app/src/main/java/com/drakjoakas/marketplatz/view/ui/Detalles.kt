@@ -1,11 +1,14 @@
 package com.drakjoakas.marketplatz.view.ui
 
+import android.app.AlertDialog
+import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.drakjoakas.marketplatz.R
 import com.drakjoakas.marketplatz.databinding.ActivityDetallesBinding
 import com.drakjoakas.marketplatz.model.ProductoApi
 import com.drakjoakas.marketplatz.model.ProductoDetail
@@ -22,6 +25,10 @@ class Detalles : AppCompatActivity() {
     private val BASE_URL = "https://www.serverbpw.com/"
     private val LOGTAG   = "LOGS"
 
+    private var precio:    String? = null
+    private var envio:     String? = null
+    private var proveedor: String? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetallesBinding.inflate(layoutInflater)
@@ -29,6 +36,9 @@ class Detalles : AppCompatActivity() {
 
         val bundle = intent.extras
         val id = bundle?.getString("id","0")
+        precio = bundle?.getString("precio","59.99")
+        envio  = bundle?.getString("envio","50.00")
+        proveedor = bundle?.getString("proveedor","Amazon")
 
         val retrofit: Retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -57,10 +67,25 @@ class Detalles : AppCompatActivity() {
                         .into(ivDetalle)
                     tvDescripcion.text = response.body()?.description
                     pbConexion.visibility = View.INVISIBLE
+                    tvPrecio.text = getString(R.string.precio,precio)
+                    tvEnvio.text = getString(R.string.envio,envio)
+                    tvProvider.text = proveedor
                 }
 
             }
 
         })
+    }
+
+    fun onClik(view: View) {
+        var builder = AlertDialog.Builder(this)
+        builder.setMessage(getString(R.string.mensaje_dialog_carrito))
+            .setTitle(R.string.titulo_dialog_carrito)
+            .setPositiveButton(R.string.cerrar_dialog) {
+                dialogInterface, i ->
+                dialogInterface.dismiss()
+            }
+            .create()
+            .show()
     }
 }
