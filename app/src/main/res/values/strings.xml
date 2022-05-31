@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">MarketPlatz</string>
+    <string name="lorem_ipsum_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tincidunt nibh nisi, id aliquam nulla fringilla sit amet. Aliquam molestie rhoncus arcu. Etiam eget tempus ante. Nam vehicula ligula sit amet lacus iaculis, vel tempor tellus rutrum. Morbi vestibulum dolor et augue dictum, sed mattis lacus scelerisque. Vivamus libero nibh, commodo at nisl ac, mollis varius lorem. Mauris ultricies pulvinar libero vel lacinia. Aliquam purus sapien, interdum sit amet bibendum sed, ultrices vel leo. Duis eget magna tincidunt sem viverra vulputate ut non est. Pellentesque commodo dictum libero, nec lacinia magna tincidunt nec. Nullam maximus tristique justo, interdum dapibus ante gravida eu. Quisque euismod justo a diam eleifend, non gravida nisl viverra. Proin molestie eu magna non pharetra. Integer in felis interdum, eleifend metus et, volutpat ante. Morbi eu tincidunt nibh.
+
+Vivamus quis consectetur felis, a blandit urna. Aliquam tortor sapien, sagittis quis leo a, tempus cursus lorem. Integer feugiat venenatis dictum. Sed finibus vulputate sapien cursus porta. Nullam quis eros quis ex fringilla finibus. Nunc et orci sed sapien posuere interdum quis in erat. Proin lectus quam, facilisis ut vestibulum at, molestie eget massa. Praesent metus nisi, cursus sit amet mauris ut, lacinia vehicula ipsum. Nam fermentum erat at enim pellentesque dignissim. Duis lacinia varius velit eget eleifend. Suspendisse sodales turpis eu dictum accumsan. Morbi eget vestibulum justo. Vivamus sodales lacus nisl, eu tincidunt nibh porttitor sed. In a volutpat sem. Nam laoreet eros vitae tortor venenatis commodo. Morbi non metus facilisis, venenatis leo at, scelerisque metus.
+
+Morbi a urna luctus, congue ligula non, accumsan lectus. Quisque a pharetra nulla. Quisque dignissim enim diam, a finibus augue tincidunt ut. Aenean et leo eu lorem feugiat vulputate at in diam. Quisque porta commodo lectus non egestas. Praesent a semper mauris. Donec id augue condimentum, suscipit ex vitae, volutpat leo. Quisque urna nunc, egestas in tincidunt vitae, porta a erat.</string>
+
+    <string name="titulo_placeholder">TITULO: PRODUCTO NOVEDOSO</string>
+    <string name="proveedor_placeholder">Bodega Aurrera</string>
+    <string name="precio_placeholder">599.99</string>
+    <string name="envio_placeholder">60.00</string>
+
+    <string name="envio">Envio: +$ %1$s</string>
+    <string name="precio">$%1$s</string>
+
+    <string name="boton_comprar">Agregar al Carrito</string>
 </resources>

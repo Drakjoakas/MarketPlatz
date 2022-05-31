@@ -8,12 +8,12 @@ import retrofit2.http.Url
 interface ProductoApi {
 
     @GET
-    fun getGames(
+    fun getProducts(
         @Url url: String?
     ): Call<List<Producto>>
 
     @GET("cm/2022-2/product_detail.php")
-    fun getGameDetail(
+    fun getProductDetail(
         @Query("id") id: String?
     ): Call<ProductoDetail>
 

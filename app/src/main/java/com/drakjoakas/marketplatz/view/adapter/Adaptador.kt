@@ -35,7 +35,10 @@ class Adaptador(context: Context, productos: List<Producto>, onItemListener: OnI
 
     class ViewHolder(binding: ListElementBinding, onItemListener: OnItemListener): RecyclerView.ViewHolder(binding.root), View.OnClickListener {
         private val tvTitle = binding.tvTitulo
-        private val ivProducto = binding.ivProducto
+        private val ivProducto  = binding.ivProducto
+        private val tvProveedor = binding.tvProveedor
+        private val tvPrecio    = binding.tvPrecio
+        private val tvEnvio     = binding.tvEnvio
 
         private val context = binding.root.context
         private val onItemListener = onItemListener
@@ -46,7 +49,10 @@ class Adaptador(context: Context, productos: List<Producto>, onItemListener: OnI
         }
 
         fun bindData(item: Producto) {
-            tvTitle.text = item.name
+            tvTitle.text      = item.name
+            tvProveedor.text  = item.provider
+            tvEnvio.text      = "Envío: +$${item.delivery}"
+            tvPrecio.text     = "$${item.price}"
 
             Glide.with(context)
                 .load(item.thumbnail)
@@ -56,6 +62,7 @@ class Adaptador(context: Context, productos: List<Producto>, onItemListener: OnI
 
         override fun onClick(p0: View?) {
             onItemListener.onItemClick(producto)
+
         }
     }
 

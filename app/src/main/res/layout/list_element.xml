@@ -3,11 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:elevation="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
 
     <LinearLayout
-        android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/ivProducto"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="10dp"
@@ -30,7 +34,6 @@
                 tools:srcCompat="@tools:sample/avatars" />
 
             <LinearLayout
-                android:id="@+id/ivThumbnail"
                 android:layout_width="252dp"
                 android:layout_height="150dp"
                 android:layout_alignParentTop="true"
@@ -46,25 +49,33 @@
                     android:id="@+id/tvTitulo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    tools:text="@string/titulo_placeholder" />
 
                 <TextView
                     android:id="@+id/tvProveedor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:textSize="10sp"
+                    tools:text="@string/proveedor_placeholder" />
 
                 <TextView
                     android:id="@+id/tvPrecio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="@string/precio_placeholder" />
 
                 <TextView
                     android:id="@+id/tvEnvio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
+                    android:textColor="@color/green"
+                    android:textSize="12sp"
+                    tools:text="@string/envio_placeholder" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
